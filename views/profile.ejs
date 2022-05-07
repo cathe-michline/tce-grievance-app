@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="shortcut icon" href="tce_icon.png">
+    <!--Google Font-->  
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <!--Bootstrap Link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./styles/profile.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <style>
+        *{
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    background: #f5d9d5;
+    font-family: "Nunito", sans-serif;
+}
+
+.btn btn-danger:hover{
+    box-shadow:0, 0.5em, 0.5em, -0.4em #cea7ee;
+    transform: translateY(0.25em);
+}
+
+.make{
+    background-color:white;
+}
+
+
+.blurb h2 {
+    color: #EA1C2C;
+    font-weight: 100;
+    font-size: 2.5rem;
+ }
+ 
+ .blurb p {
+     color: #f498b8;
+     font-weight: 100;
+     font-size: 1.125rem;
+     line-height: 2;
+ }
+ 
+ .content {
+     margin-top: 100px;
+     margin-bottom: 100px;
+ } 
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;    
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #EA1C2C;
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
+}
+
+#headingGroup span {
+    color: #EA1C2C;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.navbar.scrolled {
+    background: #cea7ee;
+    transition: background 500ms;
+}
+
+.container{
+    background:rgb(234, 28, 44,0.3);
+    border-radius: 15px;
+    padding:10px;
+    width : 1350px;
+    height : 600px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.column {
+    background:rgb(234, 28, 44,0.4);
+    border-radius: 10px;
+    height : 580px;
+    width : 320px;
+    color:white;
+    align-items: center;
+
+}
+
+.row {
+    margin-left:5px;
+    padding:10px;
+    background:rgb(234, 28, 44,0.4);
+    border-radius: 10px;
+    height : 580px;
+    width : 795px;
+    color:white;   
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pic{
+    position:relative;
+    left : 75px;
+    top:10px;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+}
+
+form input[type="file"] {
+          display: none;
+          cursor: pointer;
+          align-items: center;
+ }
+
+.profilename{
+    position:relative;
+    left: 110px;
+}
+
+@media (max-width: 1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    .blurb h2 {
+        font-size: 2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+<!--NAVBAR-->
+ <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+    <a href="#" class="navbar-brand">GRIEVANCES</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigatio
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/home" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a href="/profile" class="nav-link">PROFILE</a>
+            </li>
+        </ul>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">LOGOUT</a>
+            </li>
+        </ul>
+    </div>
+</nav><br><br><br>
+<!--END OF NAVBAR-->
+
+
+<div class="container">
+    <div class = "row">
+      <h4 style = "left: 120px;">&nbsp&nbsp&nbsp HEY THERE!: <br >&nbsp&nbsp&nbspTHANK YOU SUBMITTING YOUR GRIEVANCE,
+        <br >&nbsp&nbsp&nbspTHE GRIEVANCES ARE ANONYMOUS AND SAFE :) </h4>
+    </div>  
+</div>
+
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+ <script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $("#mainNavbar");
+            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+    });
+</script>
+    
+</body>
+</html>

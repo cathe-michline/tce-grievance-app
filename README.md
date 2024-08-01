@@ -1,6 +1,16 @@
-# tce-grievance-app
-TCE Grievance Portal is a platform for students and staffs of the institution to come together and submit their grievances and complaints. This online platform addresses all kinds of grievances a person of the institution may face
+# TCE Grievance Portal
 
-Features: Grievance Form : Form to submit the details of grievance he/she may faced Home page
+## Overview
 
-Prerequisites: Nodejs NPM Mongodb
+The TCE Grievance Portal is an online platform designed for students and staff of the institution to submit grievances and complaints. It provides a centralized space to address various issues faced by individuals within the institution.
+
+## Features
+
+- **Grievance Form**: A form to submit the details of any grievances or complaints.
+- **Home Page**: An overview page for easy navigation and access to the grievance form.
+
+## Prerequisites
+
+- Node.js
+- NPM
+- MongoDB
